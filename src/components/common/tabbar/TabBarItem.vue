@@ -7,7 +7,7 @@
     <div v-else>
       <slot name="item-active-icon"></slot>
     </div>
-    <div>
+    <div :class="{activeColor: isActive}">
       <slot name="item-text"></slot>
     </div>
   </div>
@@ -50,5 +50,9 @@
     width: 24px;
     height: 24px;
     margin-top: 3px;
+  }
+
+  .activeColor {
+    color: red;
   }
 </style>
